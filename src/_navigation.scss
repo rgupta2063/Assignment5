@@ -1,0 +1,58 @@
+nav{
+    width:540px;
+    height:190px;
+    float :left;
+    text-align: right;
+    @include break($args){width:inherit;height:50px;float:none;text-align:center;}
+    @include break($args - 500) {margin-bottom:40px !important;}
+    ul{
+        list-style-type: none;
+        margin-top:95px;    
+        @include break($args) {margin-top:0;}
+    }
+    ul li { 
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+            @include break($args) {font-size:1em;margin:0 10px;}
+            @include break($args - 192) {font-size:0.8em;margin:0 5px;}
+    
+
+        & a {
+            font-size : 1.5rem;
+            padding : 10px 5px;
+            text-decoration: none;
+            color : $orange;
+            letter-spacing : -0.01em;
+            &:hover {color:$background;}  
+                
+            }
+        }
+}
+
+footer {
+        text-align: center;
+        width:100%;
+        height:120px;
+        padding-top: 50px;
+        background: $grey;
+        @include break($args - 500) {text-align:center;}
+}
+
+.social-media {margin:0 auto;
+               width:165px;
+    a   {display:block;width:36px;height:36px;text-indent:-9999px;}
+    div {
+        float : left;
+        margin-right:5px;}
+      
+    div.one   {@include backImage('../images/social-media.png', 0 0);}
+ 
+    div.two   {@include backImage('../images/social-media.png', -38px 0);}
+    
+    div.three {@include backImage('../images/social-media.png', -76px 0);}
+   
+    div.four  {@include backImage('../images/social-media.png', -114px 0);}
+        
+        
+        }

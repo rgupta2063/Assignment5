@@ -1,0 +1,40 @@
+#headline {
+            @include set-margin(100% , 0 auto);
+            height:130px;
+            background:$orange;
+            text-align:center;
+    
+            h1 {
+                @include headall(100,2.5em);
+                color : $background;
+                padding-top:50px;
+                @include break($args - 192) {font-size:2em;padding-top:50px;}
+                @include break($args - 500) {font-size:1.5em;padding-top:30px;}
+                }
+        }
+
+#content { @include set-margin(940px , 20px auto);
+           @include break($args) {width:inherit;}
+          
+        h3       {  
+                    @include headall(400,2em);
+                    color: $brown;
+                    @include break($args - 500) {font-size:1.6em;}
+                    
+                }
+        #products{  
+                    width:460px;float:left;
+                    img      {float:left;margin-right:20px;}
+                              
+                    article  {margin-bottom:40px;}
+                               
+                    h4       {line-height:1em;}
+                    @include break($args) {width:46%;margin:0 2%;}
+                    @include break($args - 192) {width:96%;margin:0 2%;float:none;}
+                }
+        #testimonials {width:460px;float:right; 
+                       @include break($args) {width:46%;margin:0 2%;}
+                       @include break($args - 192) {width:96%;margin:0 2%;float:none;}
+                        }
+}
+

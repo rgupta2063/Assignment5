@@ -1,0 +1,64 @@
+html {
+      font-size: 62.5%;
+}
+
+body  {line-height:2em;
+        @include backImage('../images/bg.gif');
+        margin: 0;
+        padding: 0;
+        //font-size : 1.51rem;
+        font-size: 1em + .5;
+        font-family : $font-body;
+        background-color: $background;
+        background-repeat: repeat-x;
+      }
+  
+main  {@include set-margin(940px,0 auto);
+       padding:0 10px;
+       @include break($args) {width:768px;}
+       @include break($args - 192) {width:460px;}
+       @include break($args - 500) {width:300px;}
+      } 
+
+header   {width:inherit;clear:both;text-align:center;padding-top:40px;
+           
+        h1 { 
+            @include headall(100,4em);
+            color: $orange;
+            @include break($args)       {font-size:3em;}
+            @include break($args - 192) {font-size:2em;}
+            @include break($args - 500) {font-size:1.4em;margin-bottom:20px;}
+            }
+          
+        
+        h2 { 
+            @include headall(900,2.5em);
+            color : $background;
+            margin-bottom:70px;
+            @include break($args)       {font-size:1.5em;} 
+            @include break($args - 192) {font-size:1em;}
+            @include break($args - 500) {font-size:1.4em;}
+          }
+        
+        h3 { 
+            @include headall(400,2em); 
+            color : $brown;
+            margin-bottom:50px;
+            @include break($args - 192) {font-size:1.5em;}
+            @include break($args - 500) {color:$background;font-size:1em;}
+            }
+
+        img {max-width:100%;height:auto;
+             @include break($args - 192) {margin-bottom:100px;}
+             @include break($args - 500) {margin-bottom:80px;}
+            }
+        
+        
+        p,h1,h2,h3{
+            font-family: $font-headings, sans-serif;
+          }
+     
+        }
+
+
+

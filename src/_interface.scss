@@ -1,0 +1,21 @@
+figure { 
+    @include set-margin(400px , 0);
+    height:190px;
+    @include backImage('../images/logo.png' , 0 50px);
+    float:left;
+    display:block;
+    @include break($args) {width:inherit;height:140px;float:none;background-position:center;}
+    @include break($args - 500) {background-size:contain;height:100px;}    
+    }
+
+.greybar {
+    width:100%;
+    height:90px;
+    background:$offwhite;
+    clear:both;
+    padding-top:30px;
+    @include break($args - 500) {display:none;}
+    }
+
+    
+

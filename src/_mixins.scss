@@ -1,0 +1,25 @@
+@mixin headall($weight , $size, $height : 0 )
+{   font-weight : $weight;
+    font-size :$size;
+    line-height : $height;
+}
+
+@mixin backImage($image,$position: 0 0)
+{
+    background : url($image) $position;
+    background-repeat: no-repeat;   
+}
+
+@mixin set-margin($width,$margin)
+{
+    width : $width;
+    margin : $margin;
+}
+
+@mixin break ($args) 
+{
+    @media (max-width: $args){
+        @content;}
+}
+
+
